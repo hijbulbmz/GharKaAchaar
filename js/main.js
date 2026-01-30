@@ -239,3 +239,112 @@ Thank you!`;
         console.error('Error handling floating WhatsApp chat:', error);
     }
 }
+
+// Hamburger Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    }
+});
+
+// WhatsApp Order Button Handler
+document.addEventListener('DOMContentLoaded', function() {
+    const orderButtons = document.querySelectorAll('.whatsapp-order-btn');
+    
+    orderButtons.forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const productCard = this.closest('.product-card');
+            const productName = productCard.dataset.product;
+            const quantitySelect = productCard.querySelector('.quantity-select');
+            const selectedOption = quantitySelect.options[quantitySelect.selectedIndex];
+            const quantity = selectedOption.value;
+            const price = selectedOption.dataset.price;
+            
+            const message = `Hello Ghar Ka Achaar 👋
+            
+I would like to order:
+🥗 Product: ${productName}
+⚖️ Quantity: ${quantity}
+💰 Price: ₹${price}
+
+Please confirm availability and delivery details.
+Thank you! 🙏`;
+            
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/919085281996?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    });
+    
+    // Update price display when quantity changes
+    const quantitySelects = document.querySelectorAll('.quantity-select');
+    quantitySelects.forEach(function(select) {
+        select.addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            const price = selectedOption.dataset.price;
+            const productCard = this.closest('.product-card');
+            const priceDisplay = productCard.querySelector('.product-price');
+            
+            if (priceDisplay) {
+                priceDisplay.textContent = `₹${price}`;
+            }
+        });
+    });
+});
+
+// Hero CTA Button Handler
+document.addEventListener('DOMContentLoaded', function() {
+    const heroCtaButton = document.querySelector('.cta-button');
+    
+    if (heroCtaButton) {
+        heroCtaButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const message = `Hello Ghar Ka Achaar 👋
+            
+I'm interested in your homemade pickles!
+Please share details about your products and special offers.
+Thank you! 🙏`;
+            
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/919085281996?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    }
+});
+
+// Performance monitoring
+window.addEventListener('load', function() {
+    const loadTime = performance.now();
+    console.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
+});
+
+// Error handling
+window.addEventListener('error', function(e) {
+    console.error('JavaScript Error:', e.error);
+});
