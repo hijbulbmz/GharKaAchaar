@@ -701,6 +701,8 @@ input:focus, select:focus, textarea:focus {
     z-index: 101;
     pointer-events: auto;
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
 }
 
 .hamburger span {
@@ -713,6 +715,10 @@ input:focus, select:focus, textarea:focus {
 }
 
 .hamburger:hover span {
+    background-color: var(--accent-chilli);
+}
+
+.hamburger:active span {
     background-color: var(--accent-chilli);
 }
 
