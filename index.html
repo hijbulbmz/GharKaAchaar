@@ -44,6 +44,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://yourwebsite.com">
 </head>
@@ -59,7 +64,9 @@
                             <span>GA</span>
                         </div>
                     </div>
-                    <h1 class="brand-text"><a href="index.html">Ghar Ka Achaar</a></h1>
+                    <div class="brand-text">
+                    <a href="index.html">Ghar Ka Achaar</a>
+                    </div>
                 </div>
 
                 <ul class="nav-links">
@@ -101,34 +108,6 @@
                 </div>
                 
                 <a href="#" class="cta-button" onclick="handleSampleOrder(event)">👉 Order Sample on WhatsApp</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Section -->
-    <section class="trust-section">
-        <div class="container">
-            <div class="trust-grid">
-                <div class="trust-card">
-                    <div class="trust-icon">🏠</div>
-                    <h3>Homemade</h3>
-                    <p>Prepared with love in small batches</p>
-                </div>
-                <div class="trust-card">
-                    <div class="trust-icon">🌿</div>
-                    <h3>100% Organic</h3>
-                    <p>Fresh organic ingredients only</p>
-                </div>
-                <div class="trust-card">
-                    <div class="trust-icon">❌</div>
-                    <h3>No Preservatives</h3>
-                    <p>Natural preservation methods</p>
-                </div>
-                <div class="trust-card">
-                    <div class="trust-icon">👩‍🍳</div>
-                    <h3>Traditional Recipe</h3>
-                    <p>Time-honored family recipes</p>
-                </div>
             </div>
         </div>
     </section>
@@ -177,16 +156,6 @@
         </div>
     </section>
 
-    <!-- About Preview Section -->
-    <section class="about-preview">
-        <div class="container">
-            <div class="about-preview-content">
-                <p>At Ghar Ka Achaar, we prepare pickles the traditional homemade way using organic ingredients and family recipes.</p>
-                <a href="about.html" class="know-more-btn">👉 Know More</a>
-            </div>
-        </div>
-    </section>
-
     <!-- How to Order Section -->
     <section class="how-to-order">
         <div class="container">
@@ -220,6 +189,44 @@
                         <p>Get fresh pickles delivered to your home</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">🏠</div>
+                    <h3>Homemade</h3>
+                    <p>Prepared with love in small batches</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🌿</div>
+                    <h3>100% Organic</h3>
+                    <p>Fresh organic ingredients only</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">❌</div>
+                    <h3>No Preservatives</h3>
+                    <p>Natural preservation methods</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">👩‍🍳</div>
+                    <h3>Traditional Recipe</h3>
+                    <p>Time-honored family recipes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-preview-content">
+                <p>At Ghar Ka Achaar, we prepare pickles the traditional homemade way using organic ingredients and family recipes.</p>
+                <a href="about.html" class="know-more-btn">👉 Know More</a>
             </div>
         </div>
     </section>
@@ -298,7 +305,9 @@ Thank you! 🙏`;
             const navMenu = document.querySelector('.nav-menu');
             
             if (hamburger && navMenu) {
-                hamburger.addEventListener('click', function() {
+                hamburger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     hamburger.classList.toggle('active');
                     navMenu.classList.toggle('active');
                 });
