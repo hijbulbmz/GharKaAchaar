@@ -53,7 +53,7 @@
         <nav class="navbar">
             <div class="container">
                 <div class="brand-logo">
-                    <h1 class="brand-text">Ghar Ka Achaar</h1>
+                    <h1 class="brand-text"><a href="index.html">Ghar Ka Achaar</a></h1>
                 </div>
                 
                 <!-- Mobile Hamburger Menu -->
@@ -66,10 +66,10 @@
                 <!-- Navigation Menu -->
                 <div class="nav-menu" id="nav-menu">
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -77,442 +77,87 @@
     </header>
 
     <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Ghar Ka Achaar</h1>
-                    <p class="hero-tagline">Homemade 100% organic traditional Indian pickles made with love and authentic family recipes</p>
-                    
-                    <div class="offer-highlight">
-                        <p class="offer-text">🎉 Early Launch Special Offer!</p>
-                        <p class="offer-price">Get 20% OFF on your first order</p>
-                    </div>
-                    
-                    <a href="#" class="cta-button">👉 Order Now on WhatsApp</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Products Section -->
-        <section class="products" id="products">
-            <div class="container">
-                <h2 class="section-title">Our Homemade Pickles</h2>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Ghar Ka Achaar</h1>
+                <p class="hero-tagline">Homemade 100% organic traditional Indian pickles made with love and authentic family recipes</p>
                 
-                <div class="products-grid">
-                    <!-- Product Card 1 -->
-                    <article class="product-card" data-product="Mango Achaar">
-                        <div class="product-image">
-                            <img src="assets/images/download.jpg" alt="Mango Achaar" class="product-img" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Mango Achaar</h3>
-                            <p class="product-description">Traditional raw mango pickle with authentic spices</p>
-                            <div class="product-quantity">
-                                <label for="quantity-1" class="quantity-label">Quantity:</label>
-                                <select id="quantity-1" class="quantity-select">
-                                    <option value="100g" data-price="20">100g - ₹20</option>
-                                    <option value="250g" data-price="45">250g - ₹45</option>
-                                    <option value="500g" data-price="85">500g - ₹85</option>
-                                </select>
-                            </div>
-                            <div class="product-price">₹20</div>
-                            <button class="order-btn whatsapp-order-btn">
-                                👉 Order with WhatsApp
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 2 -->
-                    <article class="product-card" data-product="Lemon Achaar">
-                        <div class="product-image">
-                            <img src="assets/images/download.jpg" alt="Lemon Achaar" class="product-img" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Lemon Achaar</h3>
-                            <p class="product-description">Tangy lemon pickle with mustard seeds</p>
-                            <div class="product-quantity">
-                                <label for="quantity-2" class="quantity-label">Quantity:</label>
-                                <select id="quantity-2" class="quantity-select">
-                                    <option value="100g" data-price="18">100g - ₹18</option>
-                                    <option value="250g" data-price="40">250g - ₹40</option>
-                                    <option value="500g" data-price="75">500g - ₹75</option>
-                                </select>
-                            </div>
-                            <div class="product-price">₹18</div>
-                            <button class="order-btn whatsapp-order-btn">
-                                👉 Order with WhatsApp
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 3 -->
-                    <article class="product-card" data-product="Mixed Vegetable Achaar">
-                        <div class="product-image">
-                            <img src="assets/images/download.jpg" alt="Mixed Vegetable Achaar" class="product-img" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Mixed Vegetable Achaar</h3>
-                            <p class="product-description">Assorted vegetables in traditional spice mix</p>
-                            <div class="product-quantity">
-                                <label for="quantity-3" class="quantity-label">Quantity:</label>
-                                <select id="quantity-3" class="quantity-select">
-                                    <option value="100g" data-price="22">100g - ₹22</option>
-                                    <option value="250g" data-price="50">250g - ₹50</option>
-                                    <option value="500g" data-price="90">500g - ₹90</option>
-                                </select>
-                            </div>
-                            <div class="product-price">₹22</div>
-                            <button class="order-btn whatsapp-order-btn">
-                                👉 Order with WhatsApp
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 4 -->
-                    <article class="product-card" data-product="Garlic Achaar">
-                        <div class="product-image">
-                            <img src="assets/images/download.jpg" alt="Garlic Achaar" class="product-img" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Garlic Achaar</h3>
-                            <p class="product-description">Spicy garlic pickle with aromatic spices</p>
-                            <div class="product-quantity">
-                                <label for="quantity-4" class="quantity-label">Quantity:</label>
-                                <select id="quantity-4" class="quantity-select">
-                                    <option value="100g" data-price="25">100g - ₹25</option>
-                                    <option value="250g" data-price="55">250g - ₹55</option>
-                                    <option value="500g" data-price="100">500g - ₹100</option>
-                                </select>
-                            </div>
-                            <div class="product-price">₹25</div>
-                            <button class="order-btn whatsapp-order-btn">
-                                👉 Order with WhatsApp
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 5 -->
-                    <article class="product-card" data-product="Chilli Achaar">
-                        <div class="product-image">
-                            <img src="assets/images/download.jpg" alt="Chilli Achaar" class="product-img" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Chilli Achaar</h3>
-                            <p class="product-description">Hot and spicy green chilli pickle</p>
-                            <div class="product-quantity">
-                                <label for="quantity-5" class="quantity-label">Quantity:</label>
-                                <select id="quantity-5" class="quantity-select">
-                                    <option value="100g" data-price="20">100g - ₹20</option>
-                                    <option value="250g" data-price="45">250g - ₹45</option>
-                                    <option value="500g" data-price="85">500g - ₹85</option>
-                                </select>
-                            </div>
-                            <div class="product-price">₹20</div>
-                            <button class="order-btn whatsapp-order-btn">
-                                👉 Order with WhatsApp
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 6 -->
-                    <article class="product-card" data-product="Tomato Achaar">
-                        <div class="product-image">
-                            <img src="assets/images/download.jpg" alt="Tomato Achaar" class="product-img" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Tomato Achaar</h3>
-                            <p class="product-description">Sweet and tangy tomato pickle</p>
-                            <div class="product-quantity">
-                                <label for="quantity-6" class="quantity-label">Quantity:</label>
-                                <select id="quantity-6" class="quantity-select">
-                                    <option value="100g" data-price="18">100g - ₹18</option>
-                                    <option value="250g" data-price="40">250g - ₹40</option>
-                                    <option value="500g" data-price="75">500g - ₹75</option>
-                                </select>
-                            </div>
-                            <div class="product-price">₹18</div>
-                            <button class="order-btn whatsapp-order-btn">
-                                👉 Order with WhatsApp
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 7 -->
-                    <article class="product-card" data-product="Ginger Achaar">
-                        <div class="product-image">
-                            <img src="assets/images/download.jpg" alt="Ginger Achaar" class="product-img" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Ginger Achaar</h3>
-                            <p class="product-description">Pungent ginger pickle with lemon</p>
-                            <div class="product-quantity">
-                                <label for="quantity-7" class="quantity-label">Quantity:</label>
-                                <select id="quantity-7" class="quantity-select">
-                                    <option value="100g" data-price="22">100g - ₹22</option>
-                                    <option value="250g" data-price="50">250g - ₹50</option>
-                                    <option value="500g" data-price="90">500g - ₹90</option>
-                                </select>
-                            </div>
-                            <div class="product-price">₹22</div>
-                            <button class="order-btn whatsapp-order-btn">
-                                👉 Order with WhatsApp
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 8 -->
-                    <article class="product-card" data-product="Carrot Achaar">
-                        <div class="product-image">
-                            <img src="assets/images/download.jpg" alt="Carrot Achaar" class="product-img" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Carrot Achaar</h3>
-                            <p class="product-description">Sweet carrot pickle with mustard seeds</p>
-                            <div class="product-quantity">
-                                <label for="quantity-8" class="quantity-label">Quantity:</label>
-                                <select id="quantity-8" class="quantity-select">
-                                    <option value="100g" data-price="20">100g - ₹20</option>
-                                    <option value="250g" data-price="45">250g - ₹45</option>
-                                    <option value="500g" data-price="85">500g - ₹85</option>
-                                </select>
-                            </div>
-                            <div class="product-price">₹20</div>
-                            <button class="order-btn whatsapp-order-btn">
-                                👉 Order with WhatsApp
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 9 -->
-                    <article class="product-card" data-product="Cauliflower Achaar">
-                        <div class="product-image">
-                            <img src="assets/images/download.jpg" alt="Cauliflower Achaar" class="product-img" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Cauliflower Achaar</h3>
-                            <p class="product-description">Crispy cauliflower in tangy spices</p>
-                            <div class="product-quantity">
-                                <label for="quantity-9" class="quantity-label">Quantity:</label>
-                                <select id="quantity-9" class="quantity-select">
-                                    <option value="100g" data-price="22">100g - ₹22</option>
-                                    <option value="250g" data-price="50">250g - ₹50</option>
-                                    <option value="500g" data-price="90">500g - ₹90</option>
-                                </select>
-                            </div>
-                            <div class="product-price">₹22</div>
-                            <button class="order-btn whatsapp-order-btn">
-                                👉 Order with WhatsApp
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 10 -->
-                    <article class="product-card" data-product="Special Mix Achaar">
-                        <div class="product-image">
-                            <img src="assets/images/download.jpg" alt="Special Mix Achaar" class="product-img" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Special Mix Achaar</h3>
-                            <p class="product-description">Exclusive blend of seasonal vegetables</p>
-                            <div class="product-quantity">
-                                <label for="quantity-10" class="quantity-label">Quantity:</label>
-                                <select id="quantity-10" class="quantity-select">
-                                    <option value="100g" data-price="25">100g - ₹25</option>
-                                    <option value="250g" data-price="55">250g - ₹55</option>
-                                    <option value="500g" data-price="100">500g - ₹100</option>
-                                </select>
-                            </div>
-                            <div class="product-price">₹25</div>
-                            <button class="order-btn whatsapp-order-btn">
-                                👉 Order with WhatsApp
-                            </button>
-                        </div>
-                    </article>
+                <div class="offer-highlight">
+                    <p class="offer-text">🎉 Early Launch Offer — Sample Pack @ ₹20 for 100g</p>
+                    <p class="offer-price">Try our authentic homemade pickles today!</p>
                 </div>
+                
+                <a href="#" class="cta-button" onclick="handleSampleOrder(event)">👉 Order Sample on WhatsApp</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Us Section -->
-        <section class="about" id="about">
-            <div class="container">
-                <h2 class="section-title">About Ghar Ka Achaar</h2>
-                <div class="about-content">
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <h3 class="feature-title">Homemade</h3>
-                            <p class="feature-description">Prepared with love and care in our home kitchen</p>
-                        </div>
-                        <div class="feature-item">
-                            <h3 class="feature-title">Traditional Family Recipe</h3>
-                            <p class="feature-description">Passed down through generations for authentic taste</p>
-                        </div>
-                        <div class="feature-item">
-                            <h3 class="feature-title">100% Organic Ingredients</h3>
-                            <p class="feature-description">Fresh, locally sourced organic vegetables and spices</p>
-                        </div>
-                        <div class="feature-item">
-                            <h3 class="feature-title">Hygienic Preparation</h3>
-                            <p class="feature-description">Made in clean, hygienic environment following food safety standards</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Short Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-content">
+                <p>Welcome to Ghar Ka Achaar, where tradition meets taste. We bring you the authentic flavors of homemade Indian pickles, prepared with love using time-honored family recipes and 100% organic ingredients.</p>
+                <p>Each jar is a testament to our commitment to quality, purity, and the rich culinary heritage of India. Experience the true taste of home with every bite.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Why Choose Us Section -->
-        <section class="why-choose-us">
-            <div class="container">
-                <h2 class="section-title">Why Choose Ghar Ka Achaar</h2>
-                <div class="features-list">
-                    <ul class="features">
-                        <li class="feature">Freshly prepared</li>
-                        <li class="feature">Authentic taste</li>
-                        <li class="feature">No preservatives</li>
-                        <li class="feature">Small-batch production</li>
-                    </ul>
-                </div>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-list">
+                <ul class="features">
+                    <li class="feature">100% Organic</li>
+                    <li class="feature">Homemade</li>
+                    <li class="feature">No Preservatives</li>
+                    <li class="feature">Traditional Recipe</li>
+                </ul>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- How to Order Section -->
-        <section class="how-to-order">
-            <div class="container">
-                <h2 class="section-title">How to Order</h2>
-                <div class="order-steps">
-                    <ol class="steps-list">
-                        <li class="step">Select your favourite achaar</li>
-                        <li class="step">Choose quantity</li>
-                        <li class="step">Click "Order with WhatsApp"</li>
-                        <li class="step">Confirm order via chat</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer class="footer" id="contact">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <h3 class="footer-brand">Ghar Ka Achaar</h3>
-                <p class="footer-tagline">Authentic Homemade Indian Pickles</p>
-                <div class="footer-contact">
-                    <p class="whatsapp-number">
-                        <strong>WhatsApp:</strong> +91 90852 81996
-                    </p>
+                <div class="footer-brand">
+                    <h3>Ghar Ka Achaar</h3>
+                    <p class="footer-tagline">Homemade 100% Organic Traditional Indian Pickles</p>
                 </div>
-                <p class="copyright">© 2024 Ghar Ka Achaar. All rights reserved.</p>
+                
+                <div class="footer-contact">
+                    <div class="whatsapp-number">
+                        📱 <strong>+91 90852 81996</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Ghar Ka Achaar. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
-    
-    <!-- Floating WhatsApp Button -->
-    <div class="whatsapp-float" id="whatsapp-float">
-        <button class="whatsapp-float-btn" id="whatsapp-float-btn">
-            <span class="whatsapp-icon">💬</span>
-            <span class="whatsapp-text">Chat</span>
-        </button>
-    </div>
-    
-    <!-- Future Feature Sections (Hidden by CSS) -->
-    <!-- Combo Packs Section -->
-    <!--
-    <section class="combo-packs hidden" id="combo-packs">
-        <div class="container">
-            <h2 class="section-title">Special Combo Packs</h2>
-            <div class="combo-grid">
-                <div class="combo-card">
-                    <h3>Family Pack</h3>
-                    <p>4 varieties of pickles - 500g each</p>
-                    <div class="combo-price">₹599</div>
-                    <button class="order-btn">Order Combo</button>
-                </div>
-                <div class="combo-card">
-                    <h3>Party Pack</h3>
-                    <p>6 varieties of pickles - 250g each</p>
-                    <div class="combo-price">₹449</div>
-                    <button class="order-btn">Order Combo</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-    
-    <!-- Festival Offers Section -->
-    <!--
-    <section class="festival-offers hidden" id="festival-offers">
-        <div class="container">
-            <h2 class="section-title">Festival Special Offers</h2>
-            <div class="offers-grid">
-                <div class="offer-card">
-                    <h3>Diwali Special</h3>
-                    <p>20% off on all mango pickles</p>
-                    <div class="offer-validity">Valid till Nov 15</div>
-                </div>
-                <div class="offer-card">
-                    <h3>Navratri Combo</h3>
-                    <p>Buy 2 get 1 free on selected items</p>
-                    <div class="offer-validity">Valid till Oct 20</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-    
-    <!-- Customer Reviews Section -->
-    <!--
-    <section class="customer-reviews hidden" id="customer-reviews">
-        <div class="container">
-            <h2 class="section-title">What Our Customers Say</h2>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">Amazing taste! Reminds me of my grandmother's pickle.</p>
-                    <div class="review-author">- Priya Sharma</div>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">Fresh and authentic. Highly recommended!</p>
-                    <div class="review-author">- Rahul Verma</div>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">Best homemade pickle I've ever tasted.</p>
-                    <div class="review-author">- Anjali Patel</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-    
-    <!-- Online Payments Section (Future Feature) -->
-    <!--
-    <section class="online-payments hidden" id="online-payments">
-        <div class="container">
-            <h2 class="section-title">Secure Online Payments</h2>
-            <div class="payment-methods">
-                <div class="payment-option">
-                    <img src="assets/icons/upi-icon.png" alt="UPI">
-                    <span>UPI Payments</span>
-                </div>
-                <div class="payment-option">
-                    <img src="assets/icons/card-icon.png" alt="Cards">
-                    <span>Credit/Debit Cards</span>
-                </div>
-                <div class="payment-option">
-                    <img src="assets/icons/netbanking-icon.png" alt="Net Banking">
-                    <span>Net Banking</span>
-                </div>
-                <div class="payment-option">
-                    <img src="assets/icons/cod-icon.png" alt="COD">
-                    <span>Cash on Delivery</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
+    <script>
+        function handleSampleOrder(event) {
+            event.preventDefault();
+            
+            const message = `Hello Ghar Ka Achaar 👋
+            
+I'm interested in your Early Launch Offer!
+I would like to order the Sample Pack (100g) at ₹20.
+
+Please confirm availability and delivery details.
+Thank you! 🙏`;
+            
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/919085281996?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
