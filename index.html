@@ -123,7 +123,7 @@
                     </div>
                     <h3>Mango Achaar</h3>
                     <p class="price-from">From ₹20</p>
-                    <button class="order-btn" onclick="handleProductOrder('Mango Achaar', '100g', '20')">👉 Order on WhatsApp</button>
+                    <button class="order-btn" onclick="goToProduct('mango-achaar')">👉 View Details →</button>
                 </div>
                 <div class="popular-card">
                     <div class="popular-image">
@@ -131,7 +131,7 @@
                     </div>
                     <h3>Lemon Achaar</h3>
                     <p class="price-from">From ₹18</p>
-                    <button class="order-btn" onclick="handleProductOrder('Lemon Achaar', '100g', '18')">👉 Order on WhatsApp</button>
+                    <button class="order-btn" onclick="goToProduct('lemon-achaar')">👉 View Details →</button>
                 </div>
                 <div class="popular-card">
                     <div class="popular-image">
@@ -139,7 +139,7 @@
                     </div>
                     <h3>Mixed Vegetable Achaar</h3>
                     <p class="price-from">From ₹22</p>
-                    <button class="order-btn" onclick="handleProductOrder('Mixed Vegetable Achaar', '100g', '22')">👉 Order on WhatsApp</button>
+                    <button class="order-btn" onclick="goToProduct('mixed-vegetable-achaar')">👉 View Details →</button>
                 </div>
                 <div class="popular-card">
                     <div class="popular-image">
@@ -147,7 +147,7 @@
                     </div>
                     <h3>Garlic Achaar</h3>
                     <p class="price-from">From ₹25</p>
-                    <button class="order-btn" onclick="handleProductOrder('Garlic Achaar', '100g', '25')">👉 Order on WhatsApp</button>
+                    <button class="order-btn" onclick="goToProduct('garlic-achaar')">👉 View Details →</button>
                 </div>
             </div>
             <div class="view-all-link">
@@ -231,6 +231,40 @@
         </div>
     </section>
 
+    <!-- Benefits of Homemade Pickles Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Benefits of Homemade Pickles</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌿</div>
+                    <h3>Aids Digestion</h3>
+                    <p>Traditional spices help improve digestion naturally.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🥬</div>
+                    <h3>Good for Gut Health</h3>
+                    <p>Naturally fermented pickles support healthy gut bacteria.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🍽️</div>
+                    <h3>Boosts Appetite</h3>
+                    <p>Pickles enhance taste and increase appetite before meals.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌶️</div>
+                    <h3>Made with Natural Spices</h3>
+                    <p>Prepared using turmeric, mustard, fenugreek, and chilli.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h3>No Preservatives or Chemicals</h3>
+                    <p>100% homemade and free from artificial additives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Strong Call-to-Action Section -->
     <section class="strong-cta">
         <div class="container">
@@ -280,6 +314,10 @@ Thank you! 🙏`;
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/919085281996?text=${encodedMessage}`;
             window.open(whatsappUrl, '_blank');
+        }
+        
+        function goToProduct(productId) {
+            window.location.href = `product-${productId}.html`;
         }
         
         function handleProductOrder(productName, quantity, price) {
