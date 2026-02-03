@@ -100,356 +100,252 @@
             
             <div class="products-grid">
                 <!-- Product Card 1 -->
-                <article class="product-card" data-product="Mango Achaar">
-                    <div class="product-image">
-                        <img src="assets/images/download.jpg" alt="Mango Achaar" class="product-img" loading="lazy">
+                <div class="popular-card">
+                    <div class="popular-image">
+                        <img src="assets/images/Garlic_Pickle.jpg" alt="Garlic Achaar" loading="lazy">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Mango Achaar</h3>
-                        <p class="product-description">Traditional raw mango pickle with authentic spices</p>
-                        <div class="product-ingredients">
-                            <h4 class="ingredients-title">Ingredients:</h4>
-                            <ul class="ingredients-list">
-                                <li>Mustard oil</li>
-                                <li>Raw mango</li>
-                                <li>Salt</li>
-                                <li>Turmeric</li>
-                                <li>Red chilli</li>
-                                <li>Fenugreek</li>
-                            </ul>
+                    <h3>Garlic Achaar</h3>
+                    <p class="bengali-name">রসুন আচার</p>
+                    <div class="taste-badge spicy">Spicy</div>
+                    <p class="popular-description">Aromatic garlic pickle with traditional spices</p>
+                    
+                    <div class="ingredients-wrapper">
+                        <div class="ingredients-toggle">
+                            <span>INGREDIENTS</span>
+                            <span class="arrow">▼</span>
                         </div>
-                        <div class="product-quantity">
-                            <label for="quantity-1" class="quantity-label">Quantity:</label>
-                            <select id="quantity-1" class="quantity-select">
-                                <option value="100g" data-price="20">100g - ₹20</option>
-                                <option value="250g" data-price="45">250g - ₹45</option>
-                                <option value="500g" data-price="85">500g - ₹85</option>
-                            </select>
-                        </div>
-                        <div class="product-price">₹20</div>
-                        <button class="order-btn whatsapp-order-btn">
-                            👉 Order with WhatsApp
-                        </button>
+                        <ul class="ingredients-list">
+                            <li>Garlic</li>
+                            <li><strong>Mustard oil (Engine brand)</strong></li>
+                            <li><strong>Vinegar (Annapurna Brand)</strong></li>
+                            <li>Other masalas</li>
+                        </ul>
                     </div>
-                </article>
+                    
+                    <div class="quantity-selection">
+                        <h4 class="quantity-title">Select Quantity:</h4>
+                        <div class="quantity-options">
+                            <button class="quantity-btn" data-quantity="100g" data-price="25">100g - ₹25</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="55">250g - ₹55</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
+                        </div>
+                        <div class="custom-quantity-input" style="display: none;">
+                            <input type="number" id="garlic-custom-qty" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price will be discussed on call/WhatsApp</span>
+                        </div>
+                    </div>
+                    
+                    <button class="order-btn" onclick="handleHomepageOrder('Garlic Achaar', this)">👉 Order on WhatsApp</button>
+                    <div class="error-message" style="display: none;"></div>
+                </div>
 
                 <!-- Product Card 2 -->
-                <article class="product-card" data-product="Lemon Achaar">
-                    <div class="product-image">
-                        <img src="assets/images/download.jpg" alt="Lemon Achaar" class="product-img" loading="lazy">
+                <div class="popular-card">
+                    <div class="popular-image">
+                        <img src="assets/images/GreenChilli_1.jpg" alt="Green Chilli Achaar" loading="lazy">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Lemon Achaar</h3>
-                        <p class="product-description">Tangy lemon pickle with mustard seeds</p>
-                        <div class="product-ingredients">
-                            <h4 class="ingredients-title">Ingredients:</h4>
-                            <ul class="ingredients-list">
-                                <li>Lemon</li>
-                                <li>Mustard oil</li>
-                                <li>Salt</li>
-                                <li>Mustard seeds</li>
-                                <li>Turmeric</li>
-                                <li>Green chilli</li>
-                            </ul>
+                    <h3>Green Chilli Achaar</h3>
+                    <p class="bengali-name">সবুজ লঙ্কা আচার</p>
+                    <div class="taste-badge hot">Hot</div>
+                    <p class="popular-description">Fiery green chilli pickle for spice lovers</p>
+                    
+                    <div class="ingredients-wrapper">
+                        <div class="ingredients-toggle">
+                            <span>INGREDIENTS</span>
+                            <span class="arrow">▼</span>
                         </div>
-                        <div class="product-quantity">
-                            <label for="quantity-2" class="quantity-label">Quantity:</label>
-                            <select id="quantity-2" class="quantity-select">
-                                <option value="100g" data-price="18">100g - ₹18</option>
-                                <option value="250g" data-price="40">250g - ₹40</option>
-                                <option value="500g" data-price="75">500g - ₹75</option>
-                            </select>
-                        </div>
-                        <div class="product-price">₹18</div>
-                        <button class="order-btn whatsapp-order-btn">
-                            👉 Order with WhatsApp
-                        </button>
+                        <ul class="ingredients-list">
+                            <li>Green chilli</li>
+                            <li><strong>Mustard oil (Engine brand)</strong></li>
+                            <li><strong>Vinegar (Annapurna Brand)</strong></li>
+                            <li>Other masalas</li>
+                        </ul>
                     </div>
-                </article>
+                    
+                    <div class="quantity-selection">
+                        <h4 class="quantity-title">Select Quantity:</h4>
+                        <div class="quantity-options">
+                            <button class="quantity-btn" data-quantity="100g" data-price="20">100g - ₹20</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="45">250g - ₹45</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
+                        </div>
+                        <div class="custom-quantity-input" style="display: none;">
+                            <input type="number" id="green-chilli-custom-qty" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price will be discussed on call/WhatsApp</span>
+                        </div>
+                    </div>
+                    
+                    <button class="order-btn" onclick="handleHomepageOrder('Green Chilli Achaar', this)">👉 Order on WhatsApp</button>
+                    <div class="error-message" style="display: none;"></div>
+                </div>
 
                 <!-- Product Card 3 -->
-                <article class="product-card" data-product="Mixed Vegetable Achaar">
-                    <div class="product-image">
-                        <img src="assets/images/download.jpg" alt="Mixed Vegetable Achaar" class="product-img" loading="lazy">
+                <div class="popular-card">
+                    <div class="popular-image">
+                        <img src="assets/images/Red_Chili_Pickle_1.jpg" alt="Red Chilli Achaar" loading="lazy">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Mixed Vegetable Achaar</h3>
-                        <p class="product-description">Assorted vegetables in traditional spice mix</p>
-                        <div class="product-ingredients">
-                            <h4 class="ingredients-title">Ingredients:</h4>
-                            <ul class="ingredients-list">
-                                <li>Carrot</li>
-                                <li>Cauliflower</li>
-                                <li>Green peas</li>
-                                <li>Mustard oil</li>
-                                <li>Turmeric</li>
-                                <li>Fenugreek</li>
-                                <li>Mustard seeds</li>
-                            </ul>
+                    <h3>Red Chilli Achaar</h3>
+                    <p class="bengali-name">লাল লঙ্কা আচার</p>
+                    <div class="taste-badge hot">Hot</div>
+                    <p class="popular-description">Bold red chilli pickle with intense heat</p>
+                    
+                    <div class="ingredients-wrapper">
+                        <div class="ingredients-toggle">
+                            <span>INGREDIENTS</span>
+                            <span class="arrow">▼</span>
                         </div>
-                        <div class="product-quantity">
-                            <label for="quantity-3" class="quantity-label">Quantity:</label>
-                            <select id="quantity-3" class="quantity-select">
-                                <option value="100g" data-price="22">100g - ₹22</option>
-                                <option value="250g" data-price="50">250g - ₹50</option>
-                                <option value="500g" data-price="90">500g - ₹90</option>
-                            </select>
-                        </div>
-                        <div class="product-price">₹22</div>
-                        <button class="order-btn whatsapp-order-btn">
-                            👉 Order with WhatsApp
-                        </button>
+                        <ul class="ingredients-list">
+                            <li>Red chilli</li>
+                            <li><strong>Mustard oil (Engine brand)</strong></li>
+                            <li><strong>Vinegar (Annapurna Brand)</strong></li>
+                            <li>Other masalas</li>
+                        </ul>
                     </div>
-                </article>
+                    
+                    <div class="quantity-selection">
+                        <h4 class="quantity-title">Select Quantity:</h4>
+                        <div class="quantity-options">
+                            <button class="quantity-btn" data-quantity="100g" data-price="22">100g - ₹22</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="50">250g - ₹50</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
+                        </div>
+                        <div class="custom-quantity-input" style="display: none;">
+                            <input type="number" id="red-chilli-custom-qty" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price will be discussed on call/WhatsApp</span>
+                        </div>
+                    </div>
+                    
+                    <button class="order-btn" onclick="handleHomepageOrder('Red Chilli Achaar', this)">👉 Order on WhatsApp</button>
+                    <div class="error-message" style="display: none;"></div>
+                </div>
 
                 <!-- Product Card 4 -->
-                <article class="product-card" data-product="Garlic Achaar">
-                    <div class="product-image">
-                        <img src="assets/images/download.jpg" alt="Garlic Achaar" class="product-img" loading="lazy">
+                <div class="popular-card">
+                    <div class="popular-image">
+                        <img src="assets/images/Mixer_pickle_1.jpg" alt="Mixed Vegetable Achaar" loading="lazy">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Garlic Achaar</h3>
-                        <p class="product-description">Spicy garlic pickle with aromatic spices</p>
-                        <div class="product-ingredients">
-                            <h4 class="ingredients-title">Ingredients:</h4>
-                            <ul class="ingredients-list">
-                                <li>Garlic</li>
-                                <li>Mustard oil</li>
-                                <li>Salt</li>
-                                <li>Red chilli powder</li>
-                                <li>Turmeric</li>
-                                <li>Fenugreek</li>
-                                <li>Mustard seeds</li>
-                            </ul>
+                    <h3>Mixed Vegetable Achaar</h3>
+                    <p class="bengali-name">মিক্সড ভেজিটেবল আচার / মিক্সার আচার</p>
+                    <div class="taste-badge tangy">Tangy</div>
+                    <p class="popular-description">Colorful mix of fresh vegetables in spices</p>
+                    
+                    <div class="ingredients-wrapper">
+                        <div class="ingredients-toggle">
+                            <span>INGREDIENTS</span>
+                            <span class="arrow">▼</span>
                         </div>
-                        <div class="product-quantity">
-                            <label for="quantity-4" class="quantity-label">Quantity:</label>
-                            <select id="quantity-4" class="quantity-select">
-                                <option value="100g" data-price="25">100g - ₹25</option>
-                                <option value="250g" data-price="55">250g - ₹55</option>
-                                <option value="500g" data-price="100">500g - ₹100</option>
-                            </select>
-                        </div>
-                        <div class="product-price">₹25</div>
-                        <button class="order-btn whatsapp-order-btn">
-                            👉 Order with WhatsApp
-                        </button>
+                        <ul class="ingredients-list">
+                            <li>Carrot</li>
+                            <li>Capsicum</li>
+                            <li>Chilli</li>
+                            <li>Tomato</li>
+                            <li><strong>Mustard oil (Engine brand)</strong></li>
+                            <li><strong>Vinegar (Annapurna Brand)</strong></li>
+                            <li>Other masalas</li>
+                        </ul>
                     </div>
-                </article>
+                    
+                    <div class="quantity-selection">
+                        <h4 class="quantity-title">Select Quantity:</h4>
+                        <div class="quantity-options">
+                            <button class="quantity-btn" data-quantity="100g" data-price="24">100g - ₹24</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="55">250g - ₹55</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
+                        </div>
+                        <div class="custom-quantity-input" style="display: none;">
+                            <input type="number" id="mixed-veg-custom-qty" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price will be discussed on call/WhatsApp</span>
+                        </div>
+                    </div>
+                    
+                    <button class="order-btn" onclick="handleHomepageOrder('Mixed Vegetable Achaar', this)">👉 Order on WhatsApp</button>
+                    <div class="error-message" style="display: none;"></div>
+                </div>
 
                 <!-- Product Card 5 -->
-                <article class="product-card" data-product="Chilli Achaar">
-                    <div class="product-image">
-                        <img src="assets/images/download.jpg" alt="Chilli Achaar" class="product-img" loading="lazy">
+                <div class="popular-card">
+                    <div class="popular-image">
+                        <img src="assets/images/jujube.jpg" alt="Boroi Achaar" loading="lazy">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Chilli Achaar</h3>
-                        <p class="product-description">Hot and spicy green chilli pickle</p>
-                        <div class="product-ingredients">
-                            <h4 class="ingredients-title">Ingredients:</h4>
-                            <ul class="ingredients-list">
-                                <li>Green chilli</li>
-                                <li>Mustard oil</li>
-                                <li>Salt</li>
-                                <li>Turmeric</li>
-                                <li>Mustard seeds</li>
-                                <li>Lemon juice</li>
-                            </ul>
+                    <h3>Boroi Achaar</h3>
+                    <p class="bengali-name">বরই আচার</p>
+                    <div class="taste-badge tangy-sweet">Tangy-Sweet</div>
+                    <p class="popular-description">Sweet and sour jujube pickle with unique flavor</p>
+                    
+                    <div class="ingredients-wrapper">
+                        <div class="ingredients-toggle">
+                            <span>INGREDIENTS</span>
+                            <span class="arrow">▼</span>
                         </div>
-                        <div class="product-quantity">
-                            <label for="quantity-5" class="quantity-label">Quantity:</label>
-                            <select id="quantity-5" class="quantity-select">
-                                <option value="100g" data-price="20">100g - ₹20</option>
-                                <option value="250g" data-price="45">250g - ₹45</option>
-                                <option value="500g" data-price="85">500g - ₹85</option>
-                            </select>
-                        </div>
-                        <div class="product-price">₹20</div>
-                        <button class="order-btn whatsapp-order-btn">
-                            👉 Order with WhatsApp
-                        </button>
+                        <ul class="ingredients-list">
+                            <li>Boroi (Jujube)</li>
+                            <li><strong>Mustard oil (Engine brand)</strong></li>
+                            <li><strong>Vinegar (Annapurna Brand)</strong></li>
+                            <li>Other masalas</li>
+                        </ul>
                     </div>
-                </article>
+                    
+                    <div class="quantity-selection">
+                        <h4 class="quantity-title">Select Quantity:</h4>
+                        <div class="quantity-options">
+                            <button class="quantity-btn" data-quantity="100g" data-price="28">100g - ₹28</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="65">250g - ₹65</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
+                        </div>
+                        <div class="custom-quantity-input" style="display: none;">
+                            <input type="number" id="boroi-custom-qty" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price will be discussed on call/WhatsApp</span>
+                        </div>
+                    </div>
+                    
+                    <button class="order-btn" onclick="handleHomepageOrder('Boroi Achaar', this)">👉 Order on WhatsApp</button>
+                    <div class="error-message" style="display: none;"></div>
+                </div>
 
                 <!-- Product Card 6 -->
-                <article class="product-card" data-product="Tomato Achaar">
-                    <div class="product-image">
-                        <img src="assets/images/download.jpg" alt="Tomato Achaar" class="product-img" loading="lazy">
+                <div class="popular-card">
+                    <div class="popular-image">
+                        <img src="assets/images/capcicum.jpg" alt="Capsicum Achaar" loading="lazy">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Tomato Achaar</h3>
-                        <p class="product-description">Sweet and tangy tomato pickle</p>
-                        <div class="product-ingredients">
-                            <h4 class="ingredients-title">Ingredients:</h4>
-                            <ul class="ingredients-list">
-                                <li>Tomato</li>
-                                <li>Mustard oil</li>
-                                <li>Salt</li>
-                                <li>Turmeric</li>
-                                <li>Red chilli powder</li>
-                                <li>Fenugreek</li>
-                                <li>Sugar</li>
-                            </ul>
+                    <h3>Capsicum Achaar</h3>
+                    <p class="bengali-name">ক্যাপসিকাম আচার</p>
+                    <div class="taste-badge spicy">Spicy</div>
+                    <p class="popular-description">Crispy capsicum pickle with aromatic spices</p>
+                    
+                    <div class="ingredients-wrapper">
+                        <div class="ingredients-toggle">
+                            <span>INGREDIENTS</span>
+                            <span class="arrow">▼</span>
                         </div>
-                        <div class="product-quantity">
-                            <label for="quantity-6" class="quantity-label">Quantity:</label>
-                            <select id="quantity-6" class="quantity-select">
-                                <option value="100g" data-price="18">100g - ₹18</option>
-                                <option value="250g" data-price="40">250g - ₹40</option>
-                                <option value="500g" data-price="75">500g - ₹75</option>
-                            </select>
-                        </div>
-                        <div class="product-price">₹18</div>
-                        <button class="order-btn whatsapp-order-btn">
-                            👉 Order with WhatsApp
-                        </button>
+                        <ul class="ingredients-list">
+                            <li>Capsicum</li>
+                            <li><strong>Mustard oil (Engine brand)</strong></li>
+                            <li><strong>Vinegar (Annapurna Brand)</strong></li>
+                            <li>Other masalas</li>
+                        </ul>
                     </div>
-                </article>
-
-                <!-- Product Card 7 -->
-                <article class="product-card" data-product="Ginger Achaar">
-                    <div class="product-image">
-                        <img src="assets/images/download.jpg" alt="Ginger Achaar" class="product-img" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Ginger Achaar</h3>
-                        <p class="product-description">Pungent ginger pickle with lemon</p>
-                        <div class="product-ingredients">
-                            <h4 class="ingredients-title">Ingredients:</h4>
-                            <ul class="ingredients-list">
-                                <li>Ginger</li>
-                                <li>Mustard oil</li>
-                                <li>Salt</li>
-                                <li>Turmeric</li>
-                                <li>Lemon juice</li>
-                                <li>Green chilli</li>
-                                <li>Mustard seeds</li>
-                            </ul>
+                    
+                    <div class="quantity-selection">
+                        <h4 class="quantity-title">Select Quantity:</h4>
+                        <div class="quantity-options">
+                            <button class="quantity-btn" data-quantity="100g" data-price="26">100g - ₹26</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="60">250g - ₹60</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
                         </div>
-                        <div class="product-quantity">
-                            <label for="quantity-7" class="quantity-label">Quantity:</label>
-                            <select id="quantity-7" class="quantity-select">
-                                <option value="100g" data-price="22">100g - ₹22</option>
-                                <option value="250g" data-price="50">250g - ₹50</option>
-                                <option value="500g" data-price="90">500g - ₹90</option>
-                            </select>
+                        <div class="custom-quantity-input" style="display: none;">
+                            <input type="number" id="capsicum-custom-qty" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price will be discussed on call/WhatsApp</span>
                         </div>
-                        <div class="product-price">₹22</div>
-                        <button class="order-btn whatsapp-order-btn">
-                            👉 Order with WhatsApp
-                        </button>
                     </div>
-                </article>
-
-                <!-- Product Card 8 -->
-                <article class="product-card" data-product="Carrot Achaar">
-                    <div class="product-image">
-                        <img src="assets/images/download.jpg" alt="Carrot Achaar" class="product-img" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Carrot Achaar</h3>
-                        <p class="product-description">Sweet carrot pickle with mustard seeds</p>
-                        <div class="product-ingredients">
-                            <h4 class="ingredients-title">Ingredients:</h4>
-                            <ul class="ingredients-list">
-                                <li>Carrot</li>
-                                <li>Mustard oil</li>
-                                <li>Salt</li>
-                                <li>Turmeric</li>
-                                <li>Mustard seeds</li>
-                                <li>Red chilli powder</li>
-                                <li>Lemon juice</li>
-                            </ul>
-                        </div>
-                        <div class="product-quantity">
-                            <label for="quantity-8" class="quantity-label">Quantity:</label>
-                            <select id="quantity-8" class="quantity-select">
-                                <option value="100g" data-price="20">100g - ₹20</option>
-                                <option value="250g" data-price="45">250g - ₹45</option>
-                                <option value="500g" data-price="85">500g - ₹85</option>
-                            </select>
-                        </div>
-                        <div class="product-price">₹20</div>
-                        <button class="order-btn whatsapp-order-btn">
-                            👉 Order with WhatsApp
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Product Card 9 -->
-                <article class="product-card" data-product="Cauliflower Achaar">
-                    <div class="product-image">
-                        <img src="assets/images/download.jpg" alt="Cauliflower Achaar" class="product-img" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Cauliflower Achaar</h3>
-                        <p class="product-description">Crispy cauliflower in tangy spices</p>
-                        <div class="product-ingredients">
-                            <h4 class="ingredients-title">Ingredients:</h4>
-                            <ul class="ingredients-list">
-                                <li>Cauliflower</li>
-                                <li>Mustard oil</li>
-                                <li>Salt</li>
-                                <li>Turmeric</li>
-                                <li>Mustard seeds</li>
-                                <li>Green chilli</li>
-                                <li>Lemon juice</li>
-                            </ul>
-                        </div>
-                        <div class="product-quantity">
-                            <label for="quantity-9" class="quantity-label">Quantity:</label>
-                            <select id="quantity-9" class="quantity-select">
-                                <option value="100g" data-price="22">100g - ₹22</option>
-                                <option value="250g" data-price="50">250g - ₹50</option>
-                                <option value="500g" data-price="90">500g - ₹90</option>
-                            </select>
-                        </div>
-                        <div class="product-price">₹22</div>
-                        <button class="order-btn whatsapp-order-btn">
-                            👉 Order with WhatsApp
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Product Card 10 -->
-                <article class="product-card" data-product="Special Mix Achaar">
-                    <div class="product-image">
-                        <img src="assets/images/download.jpg" alt="Special Mix Achaar" class="product-img" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Special Mix Achaar</h3>
-                        <p class="product-description">Exclusive blend of seasonal vegetables</p>
-                        <div class="product-ingredients">
-                            <h4 class="ingredients-title">Ingredients:</h4>
-                            <ul class="ingredients-list">
-                                <li>Seasonal vegetables</li>
-                                <li>Mustard oil</li>
-                                <li>Salt</li>
-                                <li>Turmeric</li>
-                                <li>Fenugreek</li>
-                                <li>Mustard seeds</li>
-                                <li>Red chilli powder</li>
-                            </ul>
-                        </div>
-                        <div class="product-quantity">
-                            <label for="quantity-10" class="quantity-label">Quantity:</label>
-                            <select id="quantity-10" class="quantity-select">
-                                <option value="100g" data-price="25">100g - ₹25</option>
-                                <option value="250g" data-price="55">250g - ₹55</option>
-                                <option value="500g" data-price="100">500g - ₹100</option>
-                            </select>
-                        </div>
-                        <div class="product-price">₹25</div>
-                        <button class="order-btn whatsapp-order-btn">
-                            👉 Order with WhatsApp
-                        </button>
-                    </div>
-                </article>
+                    
+                    <button class="order-btn" onclick="handleHomepageOrder('Capsicum Achaar', this)">👉 Order on WhatsApp</button>
+                    <div class="error-message" style="display: none;"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Trust Section -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -473,57 +369,5 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
-    <script>
-        // Mobile menu toggle - simplified version
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            if (hamburger && navMenu) {
-                // Only handle hamburger toggle
-                hamburger.addEventListener('click', function() {
-                    hamburger.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                });
-                
-                hamburger.addEventListener('touchstart', function() {
-                    hamburger.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                });
-                
-                // Close menu when clicking outside
-                document.addEventListener('click', function(event) {
-                    if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-                        hamburger.classList.remove('active');
-                        navMenu.classList.remove('active');
-                    }
-                });
-                
-                document.addEventListener('touchstart', function(event) {
-                    if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-                        hamburger.classList.remove('active');
-                        navMenu.classList.remove('active');
-                    }
-                });
-            }
-        });
-        
-        function handleProductOrder(productName, quantity, price) {
-            const message = `Hello Ghar Ka Achaar 👋
-            
-I would like to order:
-
-Product: ${productName}
-Quantity: ${quantity}
-Price: ₹${price}
-
-Please confirm availability.
-Thank you! 🙏`;
-            
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/919085281996?text=${encodedMessage}`;
-            window.open(whatsappUrl, '_blank');
-        }
-    </script>
 </body>
 </html>

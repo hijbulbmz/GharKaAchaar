@@ -338,6 +338,125 @@ Thank you! 🙏`;
     }
 });
 
+// Homepage Order Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle quantity button clicks for homepage-style cards
+    document.querySelectorAll('.quantity-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const card = this.closest('.popular-card');
+            const allBtns = card.querySelectorAll('.quantity-btn');
+            const customInput = card.querySelector('.custom-quantity-input');
+            const errorMsg = card.querySelector('.error-message');
+            
+            if (!card) return;
+            
+            // Hide error message
+            if (errorMsg) errorMsg.style.display = 'none';
+            
+            // Remove selected class from all buttons
+            allBtns.forEach(function(b) {
+                b.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked button
+            this.classList.add('selected');
+            
+            // Show/hide custom input
+            if (customInput) {
+                if (this.dataset.quantity === 'custom') {
+                    customInput.style.display = 'block';
+                } else {
+                    customInput.style.display = 'none';
+                }
+            }
+        });
+    });
+});
+
+// Homepage Order Handler (used by both homepage and products page)
+function handleHomepageOrder(productName, buttonElement) {
+    const card = buttonElement.closest('.popular-card');
+    const selectedBtn = card.querySelector('.quantity-btn.selected');
+    const errorMsg = card.querySelector('.error-message');
+    
+    // Hide any previous error
+    if (errorMsg) errorMsg.style.display = 'none';
+    
+    if (!selectedBtn) {
+        if (errorMsg) {
+            errorMsg.textContent = 'Please select a quantity';
+            errorMsg.style.display = 'block';
+        }
+        return;
+    }
+    
+    const quantity = selectedBtn.dataset.quantity;
+    const price = selectedBtn.dataset.price;
+    
+    let message = `Hello Ghar Ka Achaar 👋
+    
+I would like to order:
+🥗 Product: ${productName}
+⚖️ Quantity: ${quantity}
+💰 Price: ₹${price}
+
+Please confirm availability and delivery details.
+Thank you! 🙏`;
+    
+    if (quantity === 'custom') {
+        const customQtyInput = card.querySelector('.custom-quantity-input input');
+        const customQty = customQtyInput ? customQtyInput.value : '';
+        
+        if (!customQty || customQty < 100) {
+            if (errorMsg) {
+                errorMsg.textContent = 'Please enter at least 100g for custom quantity';
+                errorMsg.style.display = 'block';
+            }
+            return;
+        }
+        
+        message = `Hello Ghar Ka Achaar 👋
+        
+I would like to order:
+🥗 Product: ${productName}
+⚖️ Quantity: ${customQty}g (Custom)
+💰 Price: To be discussed
+
+Please confirm availability and delivery details.
+Thank you! 🙏`;
+    }
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/919085281996?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+}
+
+// Ingredients Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Attach event listeners to ALL ingredient toggles on both pages
+    const ingredientToggles = document.querySelectorAll('.ingredients-toggle');
+    
+    ingredientToggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function() {
+            const wrapper = this.parentElement;
+            const list = wrapper.querySelector('.ingredients-list');
+            const arrow = this.querySelector('.arrow');
+            
+            // Toggle the show class
+            list.classList.toggle('show');
+            
+            // Update arrow based on state
+            if (list.classList.contains('show')) {
+                arrow.textContent = '▲';
+                this.classList.add('active');
+            } else {
+                arrow.textContent = '▼';
+                this.classList.remove('active');
+            }
+        });
+    });
+});
+
 // Performance monitoring
 window.addEventListener('load', function() {
     const loadTime = performance.now();
