@@ -565,8 +565,8 @@ input:focus, select:focus, textarea:focus {
 
 .logo-container {
     position: relative;
-    width: 48px;
-    height: 48px;
+    width: 70px;
+    height: 70px;
     flex-shrink: 0;
 }
 
@@ -594,7 +594,7 @@ input:focus, select:focus, textarea:focus {
 
 .brand-text {
     font-family: var(--font-brand);
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     font-weight: var(--font-weight-brand);
     color: var(--primary-achaar);
     letter-spacing: 0.02em;
