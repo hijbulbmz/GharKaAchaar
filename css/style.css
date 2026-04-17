@@ -4792,3 +4792,91 @@ select,
         font-size: 1rem;
     }
 }
+
+/* =============================================
+   HOME PAGE - MINI PRODUCT SECTION
+   ============================================= */
+
+.home-products .popular-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.home-products .popular-card {
+    padding: 14px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.home-products .popular-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.home-products .popular-image {
+    height: 180px;
+    margin-bottom: 0.5rem;
+}
+
+.home-products .popular-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.home-products .popular-card h3 {
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    font-family: var(--font-brand);
+}
+
+.home-products .bengali-name {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.home-products .price-preview {
+    font-weight: 700;
+    color: var(--primary-maroon);
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.home-products .view-details-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-maroon);
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto;
+    transition: background 0.2s ease;
+    border: none;
+}
+
+.home-products .view-details-btn:hover {
+    background: var(--accent-chilli);
+}
+
+@media (max-width: 768px) {
+    .home-products .popular-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .home-products .popular-image {
+        height: 200px;
+    }
+}
