@@ -4302,7 +4302,7 @@ select,
 
 .step-number {
     background-color: var(--primary-achaar);
-    color: black;
+    color: white;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
@@ -4688,6 +4688,18 @@ select,
     font-size: 0.8rem;
     color: var(--text-light);
     margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-item-qty-select {
+    padding: 2px 4px;
+    border: 1px solid var(--border-medium);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    background: #fff;
+    cursor: pointer;
 }
 
 .cart-item-price {
@@ -4874,7 +4886,7 @@ select,
 .home-products .popular-card {
     padding: 18px;
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #fff;
     display: flex;
@@ -4883,7 +4895,7 @@ select,
 
 .home-products .popular-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .home-products .popular-image {
@@ -4950,7 +4962,7 @@ select,
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .home-products .popular-image {
         height: 180px;
     }
@@ -4988,7 +5000,7 @@ select,
 .strong-cta {
     padding: 6rem 0;
     background: linear-gradient(135deg, var(--primary-maroon) 0%, #a52a2a 100%);
-    box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
     color: white;
 }
 
@@ -4999,11 +5011,11 @@ select,
     border-radius: 50px;
     font-size: 1.2rem;
     font-weight: 700;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 }
 
 .cta-primary-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-}
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}

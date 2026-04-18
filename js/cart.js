@@ -41,6 +41,16 @@ function clearCart() {
     renderCartPanel();
 }
 
+function updateItemCount(id, count) {
+    var cart = getCart();
+    var item = cart.find(function (i) { return i.id === id; });
+    if (item) {
+        item.count = parseInt(count, 10);
+        saveCart(cart);
+        renderCartPanel();
+    }
+}
+
 /* ---------- Badge ---------- */
 
 function updateCartBadge() {
@@ -90,10 +100,22 @@ function renderCartPanel() {
         if (lineTotal !== null) total += lineTotal;
         var priceDisplay = (lineTotal !== null) ? ('₹' + lineTotal) : 'Price TBD';
         var safeId = item.id.replace(/'/g, "\\'");
+        
+        // Generate quantity options 1-10
+        var qtyOptions = '';
+        for (var i = 1; i <= 10; i++) {
+            qtyOptions += '<option value="' + i + '"' + (item.count === i ? ' selected' : '') + '>' + i + '</option>';
+        }
+
         html += '<div class="cart-item">' +
             '<div class="cart-item-info">' +
             '<div class="cart-item-name">' + item.name + '</div>' +
-            '<div class="cart-item-meta">' + item.quantity + ' &times; ' + item.count + '</div>' +
+            '<div class="cart-item-meta">' + 
+            '<span>' + item.quantity + '</span>' +
+            '<select class="cart-item-qty-select" onchange="updateItemCount(\'' + safeId + '\', this.value)">' + 
+            qtyOptions + 
+            '</select>' +
+            '</div>' +
             '<div class="cart-item-price">' + priceDisplay + '</div>' +
             '</div>' +
             '<button class="cart-item-remove" onclick="removeFromCart(\'' + safeId + '\')" aria-label="Remove">&#x2715;</button>' +
@@ -156,6 +178,10 @@ function getSelectedQty(card) {
         var grams = parseInt(val, 10);
         if (isNaN(grams) || grams < 100) {
             alert('Please enter a valid quantity (minimum 100g).');
+            return null;
+        }
+        if (grams > 3000) {
+            alert('Maximum custom quantity is 3000g (3kg). For larger orders, please contact us directly.');
             return null;
         }
         return { quantity: grams + 'g', price: null };
