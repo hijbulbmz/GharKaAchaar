@@ -150,14 +150,15 @@ function getSelectedQty(card) {
     var qty = selectedBtn.dataset.quantity;
 
     if (qty === 'custom') {
-        var val = prompt('Enter quantity in grams (minimum 100g):');
-        if (val === null || val === '') return null;          // cancelled
+        var input = card.querySelector('.custom-quantity-input input');
+        var val = input ? input.value : null;
+        if (!val || val === '') return null;
         var grams = parseInt(val, 10);
         if (isNaN(grams) || grams < 100) {
             alert('Please enter a valid quantity (minimum 100g).');
             return null;
         }
-        return { quantity: 'Custom (' + grams + 'g)', price: null };
+        return { quantity: grams + 'g', price: null };
     }
 
     return {
@@ -216,9 +217,14 @@ document.addEventListener('DOMContentLoaded', function () {
             card.querySelectorAll('.quantity-btn').forEach(function (b) { b.classList.remove('selected'); });
             this.classList.add('selected');
 
-            // Hide legacy custom input (we use prompt() now), keep it from flashing
-            var customInput = card.querySelector('.custom-quantity-input');
-            if (customInput) customInput.style.display = 'none';
+            // Toggle custom input field
+            var customField = card.querySelector('.custom-quantity-input');
+            if (customField) {
+                customField.style.display = (this.dataset.quantity === 'custom') ? 'block' : 'none';
+                if (this.dataset.quantity === 'custom') {
+                    customField.querySelector('input').focus();
+                }
+            }
 
             var errorEl = card.querySelector('.error-message');
             if (errorEl) errorEl.style.display = 'none';
