@@ -118,6 +118,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 h3 {
@@ -663,8 +664,75 @@ textarea:focus {
     padding-bottom: 4rem;
 }
 
-.pb-20 {
-    padding-bottom: 5rem;
+/* Hero Section Redesign */
+.hero {
+    position: relative;
+    padding: 80px 20px;
+    background: url('../assets/images/hero_bg_pickles.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 60vh;
+    color: var(--text-dark);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-family: var(--font-brand);
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-maroon);
+    margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-charcoal);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.hero .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary-maroon);
+    color: #fff;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(122, 28, 28, 0.3);
+}
+
+.hero .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(122, 28, 28, 0.4);
+    background: #912222;
+}
+
+/* Sections Global Styling */
+section {
+    padding: 50px 20px;
 }
 
 .pl-0 {
@@ -4800,83 +4868,142 @@ select,
 .home-products .popular-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 30px;
 }
 
 .home-products .popular-card {
-    padding: 14px;
-    border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #fff;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
 }
 
 .home-products .popular-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .home-products .popular-image {
-    height: 180px;
-    margin-bottom: 0.5rem;
+    height: 200px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 .home-products .popular-image img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 12px;
+    transition: transform 0.5s ease;
+}
+
+.home-products .popular-card:hover .popular-image img {
+    transform: scale(1.05);
 }
 
 .home-products .popular-card h3 {
-    margin-top: 0.8rem;
-    font-size: 1.2rem;
-    margin-bottom: 0.2rem;
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
     font-family: var(--font-brand);
+    color: var(--primary-maroon);
 }
 
 .home-products .bengali-name {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-light);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .home-products .price-preview {
     font-weight: 700;
-    color: var(--primary-maroon);
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
+    color: var(--text-charcoal);
+    margin: 0.75rem 0;
+    font-size: 1.15rem;
 }
 
 .home-products .view-details-btn {
     display: inline-block;
     width: 100%;
-    padding: 12px;
-    background: var(--primary-maroon);
-    color: #fff;
+    padding: 10px;
+    background: transparent;
+    color: var(--primary-maroon);
     text-align: center;
     border-radius: 10px;
     font-weight: 600;
     text-decoration: none;
     margin-top: auto;
-    transition: background 0.2s ease;
-    border: none;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-maroon);
 }
 
 .home-products .view-details-btn:hover {
-    background: var(--accent-chilli);
+    background: var(--primary-maroon);
+    color: #fff;
 }
 
 @media (max-width: 768px) {
     .home-products .popular-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 20px;
     }
-
+    
     .home-products .popular-image {
-        height: 200px;
+        height: 180px;
     }
 }
+
+/* Feature/Trust Section Polish */
+.trust-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+/* How to Order Numbered Badges */
+.order-step {
+    text-align: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.step-badge {
+    background: var(--primary-maroon);
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0 auto 0.5rem;
+    box-shadow: 0 4px 10px rgba(122, 28, 28, 0.2);
+}
+
+/* CTA Gradient Enhancement */
+.strong-cta {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--primary-maroon) 0%, #a52a2a 100%);
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
+    color: white;
+}
+
+.cta-primary-btn {
+    background: #fff;
+    color: var(--primary-maroon);
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.cta-primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
