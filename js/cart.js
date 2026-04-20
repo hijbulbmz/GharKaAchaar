@@ -95,6 +95,13 @@ function renderCartPanel() {
 
     var total = 0;
     var html = '';
+    
+    // Add Cart Header with Clear Cart button
+    html += '<div class="cart-header-actions">' +
+            '<h3>Your Cart</h3>' +
+            '<button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>' +
+            '</div>';
+
     cart.forEach(function (item) {
         var lineTotal = (typeof item.price === 'number') ? item.price * item.count : null;
         if (lineTotal !== null) total += lineTotal;
@@ -222,10 +229,8 @@ function orderNowFromCard(productName, btn) {
         return;
     }
 
-    var priceStr = (result.price !== null) ? ('₹' + result.price) : 'To be discussed';
     var message = 'Hello Ghar Ka Achaar 👋\n\nI would like to order:\n\nProduct: ' + productName +
         '\nQuantity: ' + result.quantity +
-        '\nPrice: ' + priceStr +
         '\n\nPlease confirm availability. Thank you! 🙏';
     var url = 'https://wa.me/919085281996?text=' + encodeURIComponent(message);
     window.open(url, '_blank');
