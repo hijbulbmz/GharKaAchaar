@@ -202,6 +202,32 @@ function getSelectedQty(card) {
 
 /* ---------- Card Actions ---------- */
 
+function triggerQuantityError(card) {
+    var errorEl = card.querySelector('.error-message');
+    var qtySection = card.querySelector('.quantity-selection');
+
+    if (errorEl) {
+        errorEl.textContent = 'Please select a quantity first.';
+        errorEl.style.display = 'block';
+    } else {
+        alert('Please select a quantity first.');
+    }
+
+    if (qtySection) {
+        qtySection.classList.add('quantity-error');
+        
+        // Mobile UX: Scroll if not fully in view
+        var rect = qtySection.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight) {
+            qtySection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        setTimeout(function() {
+            qtySection.classList.remove('quantity-error');
+        }, 1500);
+    }
+}
+
 function addToCartFromCard(productName, btn) {
     var card = btn.closest('.popular-card');
     var errorEl = card.querySelector('.error-message');
@@ -209,8 +235,7 @@ function addToCartFromCard(productName, btn) {
 
     var result = getSelectedQty(card);
     if (!result) {
-        if (errorEl) { errorEl.textContent = 'Please select a quantity first.'; errorEl.style.display = 'block'; }
-        else alert('Please select a quantity first.');
+        triggerQuantityError(card);
         return;
     }
 
@@ -224,8 +249,7 @@ function orderNowFromCard(productName, btn) {
 
     var result = getSelectedQty(card);
     if (!result) {
-        if (errorEl) { errorEl.textContent = 'Please select a quantity first.'; errorEl.style.display = 'block'; }
-        else alert('Please select a quantity first.');
+        triggerQuantityError(card);
         return;
     }
 
