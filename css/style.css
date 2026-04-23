@@ -60,6 +60,9 @@ body {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 /* Container */
@@ -67,7 +70,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 16px;
 }
 
 /* Grid System */
@@ -744,8 +747,8 @@ textarea:focus {
 }
 
 /* Sections Global Styling */
-section {
-    padding: 60px 20px;
+section, .section {
+    padding: 40px 16px;
 }
 
 .pl-0 {
@@ -2022,8 +2025,9 @@ section {
 .social-links {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .social-link {
@@ -2070,6 +2074,21 @@ section {
     border-radius: 1.5rem;
     border: 1px solid var(--border-light);
 }
+
+/* About Page Specific Styles */
+.about-logo img {
+    width: 150px;
+    margin: 0 auto 2rem;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .about-logo img {
+        width: 120px;
+        margin-bottom: 1.5rem;
+    }
+}
+
 
 .instagram-section h3 {
     margin-bottom: 1rem;
@@ -5146,21 +5165,22 @@ select,
 }
 
 .vybsoft-link {
-    color: var(--primary-maroon);
+    color: #4f46e5;
     font-weight: 600;
     text-decoration: none;
     display: inline-block;
     padding: 10px 25px;
-    border: 1.5px solid var(--primary-maroon);
+    border: 1.5px solid #4f46e5;
     border-radius: 50px;
     transition: all 0.3s ease;
     font-size: 0.9rem;
 }
 
 .vybsoft-link:hover {
-    background: var(--primary-maroon);
+    background: #4f46e5;
     color: #fff;
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
 }
 
 /* Contact Page VybSoft CTA Section */
@@ -5202,33 +5222,110 @@ select,
 
 .vybsoft-visit-btn {
     display: inline-block;
-    background: var(--primary-maroon);
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
     color: #fff !important;
     padding: 16px 45px;
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 20px rgba(122, 28, 28, 0.2);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
 }
 
 .vybsoft-visit-btn:hover {
-    background: var(--secondary-gold);
+    background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(212, 160, 26, 0.4);
+    box-shadow: 0 12px 30px rgba(79, 70, 229, 0.4);
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding: 0 15px;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 16px;
+        height: auto;
+    }
+
+    .nav-inner {
+        padding: 0;
+        height: auto;
+    }
+
+    .nav-links {
+        display: none !important;
     }
 
     .hero {
-        padding: 60px 15px;
+        width: 100%;
+        padding: 40px 16px;
+        text-align: center;
+        min-height: auto;
     }
 
-    .contact-vybsoft-cta {
-        margin: 40px 15px 30px;
-        padding: 50px 20px;
+    .hero-title {
+        font-size: 26px !important;
+        margin-bottom: 10px;
+    }
+
+    .hero-tagline {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .hero .cta-button {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .popular-grid, .products-grid, .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .popular-card, .product-card, .card {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .quantity-options-grid, .quantity-options {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .quantity-btn, .quantity-options button {
+        flex: 1;
+        padding: 8px;
+        font-size: 13px;
+        min-width: 80px;
+    }
+
+    .custom-qty-row, .custom-btn {
+        width: 100%;
+    }
+
+    .custom-quantity-btn {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 26px !important;
+    }
+
+    h2 {
+        font-size: 22px !important;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 16px;
     }
 }
