@@ -112,10 +112,15 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Ghar Ka Achaar</h1>
-                <p class="hero-tagline">Homemade • 100% Organic • Traditional Taste</p>
-                <a href="#" class="cta-button" onclick="handleSampleOrder(event)">💬 Order Sample on WhatsApp</a>
+            <div class="hero-banner">
+                <h1>🔥 Early Bird Offer – All Pickles at Just ₹49!</h1>
+                <div class="hero-prices">
+                    <span>100g - ₹49</span>
+                    <span>200g - ₹99</span>
+                    <span>250g - ₹119</span>
+                </div>
+                <p>⚡ 1 Hour Instant Delivery Across Hailakandi</p>
+                <a href="https://wa.me/919085281996" class="cta">Order Now on WhatsApp</a>
             </div>
         </div>
     </section>
@@ -125,22 +130,152 @@
         <div class="container">
             <h2 class="section-title">Popular Pickles</h2>
             <div class="popular-grid">
-                <!-- Khatta Meetha Achaar -->
+                <!-- Mango Pickle (Tangy/Spicy) -->
                 <div class="popular-card">
+                    <div class="badge-new">NEW</div>
                     <div class="popular-image">
-                        <img src="assets/images/Khatta-meetha.png" alt="Khatta Meetha Achaar">
+                        <img src="assets/images/Mango_Pickle.jpg" alt="Mango Pickle">
                     </div>
-                    <h3>Khatta Meetha Achaar</h3>
-                    <p class="bengali-name">খাট্টা মিঠা আচার</p>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
+                    <h3>Mango Pickle (Tangy/Spicy)</h3>
+                    <p class="bengali-name">আমের আচার</p>
+
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
+                    </div>
+
+
                     <div class="quantity-selection">
                         <h4 class="quantity-title">Select Quantity:</h4>
                         <div class="quantity-options-grid">
-                            <button class="quantity-btn" data-quantity="100g" data-price="85">100g</button>
-                            <button class="quantity-btn" data-quantity="250g" data-price="199">250g</button>
-                            <div class="custom-qty-row">
-                                <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom
-                                    Qty</button>
-                            </div>
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
+                        </div>
+                        <div class="custom-quantity-input" style="display: none;">
+                            <input type="number" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price discussed on WhatsApp</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="add-cart-btn outlined"
+                            onclick="addToCartFromCard('Mango Pickle (Tangy/Spicy)', this)">Add to Cart</button>
+                        <button class="order-now-btn"
+                            onclick="orderNowFromCard('Mango Pickle (Tangy/Spicy)', this)">Order Now</button>
+                    </div>
+                    <div class="error-message" style="display: none;"></div>
+                </div>
+
+                <!-- Mango with Red Chilli Pickle (Tangy/Hot) -->
+                <div class="popular-card">
+                    <div class="badge-new">NEW</div>
+                    <div class="popular-image">
+                        <img src="assets/images/Red_Chili_Pickle_1.jpg" alt="Mango with Red Chilli Pickle">
+                    </div>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
+                    <h3>Mango with Red Chilli Pickle (Tangy/Hot)</h3>
+                    <p class="bengali-name">আম ও লাল লঙ্কা আচার</p>
+
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
+                    </div>
+
+
+                    <div class="quantity-selection">
+                        <h4 class="quantity-title">Select Quantity:</h4>
+                        <div class="quantity-options-grid">
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
+                        </div>
+                        <div class="custom-quantity-input" style="display: none;">
+                            <input type="number" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price discussed on WhatsApp</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="add-cart-btn outlined"
+                            onclick="addToCartFromCard('Mango with Red Chilli Pickle (Tangy/Hot)', this)">Add to
+                            Cart</button>
+                        <button class="order-now-btn"
+                            onclick="orderNowFromCard('Mango with Red Chilli Pickle (Tangy/Hot)', this)">Order
+                            Now</button>
+                    </div>
+                    <div class="error-message" style="display: none;"></div>
+                </div>
+
+                <!-- Garlic Pickle (Spicy) -->
+                <div class="popular-card">
+                    <div class="badge-new">NEW</div>
+                    <div class="popular-image">
+                        <img src="assets/images/Garlic_Pickle.jpg" alt="Garlic Pickle">
+                    </div>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
+                    <h3>Garlic Pickle (Spicy)</h3>
+                    <p class="bengali-name">রসুন আচার</p>
+
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
+                    </div>
+
+
+                    <div class="quantity-selection">
+                        <h4 class="quantity-title">Select Quantity:</h4>
+                        <div class="quantity-options-grid">
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
+                        </div>
+                        <div class="custom-quantity-input" style="display: none;">
+                            <input type="number" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price discussed on WhatsApp</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="add-cart-btn outlined"
+                            onclick="addToCartFromCard('Garlic Pickle (Spicy)', this)">Add to Cart</button>
+                        <button class="order-now-btn" onclick="orderNowFromCard('Garlic Pickle (Spicy)', this)">Order
+                            Now</button>
+                    </div>
+                    <div class="error-message" style="display: none;"></div>
+                </div>
+
+                <!-- Khatta Meetha Achaar -->
+                <div class="popular-card">
+                    <div class="badge-new">NEW</div>
+                    <div class="popular-image">
+                        <img src="assets/images/Khatta-meetha.png" alt="Khatta Meetha Achaar">
+                    </div>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
+                    <h3>Khatta Meetha Achaar</h3>
+                    <p class="bengali-name">খাট্টা মিঠা আচার</p>
+
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
+                    </div>
+
+
+                    <div class="quantity-selection">
+                        <h4 class="quantity-title">Select Quantity:</h4>
+                        <div class="quantity-options-grid">
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
                         </div>
                         <div class="custom-quantity-input" style="display: none;">
                             <input type="number" min="100" placeholder="Enter grams (min 100g)">
@@ -162,17 +297,24 @@
                     <div class="popular-image">
                         <img src="assets/images/Jolpai_Pickle-1.jpg" alt="Jolpai Achaar">
                     </div>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
                     <h3>Jolpai Achaar</h3>
                     <p class="bengali-name">জলপাই আচার</p>
+
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
+                    </div>
+
+
                     <div class="quantity-selection">
                         <h4 class="quantity-title">Select Quantity:</h4>
                         <div class="quantity-options-grid">
-                            <button class="quantity-btn" data-quantity="100g" data-price="85">100g</button>
-                            <button class="quantity-btn" data-quantity="250g" data-price="199">250g</button>
-                            <div class="custom-qty-row">
-                                <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom
-                                    Qty</button>
-                            </div>
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
                         </div>
                         <div class="custom-quantity-input" style="display: none;">
                             <input type="number" min="100" placeholder="Enter grams (min 100g)">
@@ -194,17 +336,24 @@
                     <div class="popular-image">
                         <img src="assets/images/GreenChilli_1.jpg" alt="Green Chilli Achaar">
                     </div>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
                     <h3>Green Chilli</h3>
                     <p class="bengali-name">কাঁচা লঙ্কার আচার</p>
+
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
+                    </div>
+
+
                     <div class="quantity-selection">
                         <h4 class="quantity-title">Select Quantity:</h4>
                         <div class="quantity-options-grid">
-                            <button class="quantity-btn" data-quantity="100g" data-price="80">100g</button>
-                            <button class="quantity-btn" data-quantity="250g" data-price="185">250g</button>
-                            <div class="custom-qty-row">
-                                <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom
-                                    Qty</button>
-                            </div>
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
                         </div>
                         <div class="custom-quantity-input" style="display: none;">
                             <input type="number" min="100" placeholder="Enter grams (min 100g)">
@@ -226,17 +375,24 @@
                     <div class="popular-image">
                         <img src="assets/images/jujube.jpg" alt="Boroi Achaar">
                     </div>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
                     <h3>Boroi Achaar</h3>
                     <p class="bengali-name">কুলের আচার</p>
+
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
+                    </div>
+
+
                     <div class="quantity-selection">
                         <h4 class="quantity-title">Select Quantity:</h4>
                         <div class="quantity-options-grid">
-                            <button class="quantity-btn" data-quantity="100g" data-price="80">100g</button>
-                            <button class="quantity-btn" data-quantity="250g" data-price="185">250g</button>
-                            <div class="custom-qty-row">
-                                <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom
-                                    Qty</button>
-                            </div>
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
                         </div>
                         <div class="custom-quantity-input" style="display: none;">
                             <input type="number" min="100" placeholder="Enter grams (min 100g)">

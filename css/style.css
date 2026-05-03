@@ -2016,7 +2016,7 @@ section, .section {
 }
 
 .quantity-options-grid .custom-qty-row {
-    grid-column: span 2;
+    grid-column: auto;
 }
 
 
@@ -3623,6 +3623,7 @@ select,
     border-radius: 1.5rem;
     overflow: hidden;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .popular-card:hover {
@@ -5125,7 +5126,7 @@ select,
     margin-top: 50px;
 
     padding-top: 40px;
-    border-top: 1px solid rgba(122, 28, 28, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     width: 100%;
 }
@@ -5158,29 +5159,31 @@ select,
 
 .vybsoft-text {
     font-size: 0.95rem;
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.8);
     margin: 0 0 10px 0;
     line-height: 1.6;
     max-width: 450px;
 }
 
 .vybsoft-link {
-    color: #4f46e5;
+    background: #6d28d9;
+    color: #fff;
     font-weight: 600;
     text-decoration: none;
     display: inline-block;
     padding: 10px 25px;
-    border: 1.5px solid #4f46e5;
+    border: none;
     border-radius: 50px;
     transition: all 0.3s ease;
     font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .vybsoft-link:hover {
-    background: #4f46e5;
+    background: #5b21b6;
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 6px 20px rgba(109, 40, 217, 0.3);
 }
 
 /* Contact Page VybSoft CTA Section */
@@ -5328,4 +5331,112 @@ select,
     .container {
         padding: 0 16px;
     }
+}
+
+/* Promotional & Offer Styles */
+.badge-new {
+    background: #8B0000;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.hero-prices {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.hero-prices span {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+    margin-right: 8px;
+}
+
+.new-price {
+    color: #8B0000;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.offer-tag {
+    background: #FFD700;
+    color: black;
+    padding: 2px 6px;
+    font-size: 11px;
+    margin-left: 6px;
+    border-radius: 4px;
+}
+
+.hero-banner {
+    background: linear-gradient(to right, #8B0000, #a52a2a);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(139, 0, 0, 0.2);
+}
+
+.hero-banner h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white !important;
+}
+
+.hero-banner p {
+    font-size: 14px;
+    color: white !important;
+}
+
+.hero-banner .cta {
+    margin-top: 15px;
+    background: white;
+    color: #8B0000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.hero-banner .cta:hover {
+    transform: scale(1.05);
+}
+
+.offer-card-label {
+    font-size: 11px;
+    color: #8B0000;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.price-structure {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+    background: #fff9f0;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px dashed #ddd;
+    text-align: left;
 }

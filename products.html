@@ -99,7 +99,12 @@
     <section class="hero products-hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Our Homemade Pickles</h1>
+                <h1 class="hero-title">🔥 Early Bird Offer – All Pickles at Just ₹49!</h1>
+                <div class="hero-prices" style="display: flex; justify-content: center; gap: 20px; margin: 15px 0; font-weight: 600;">
+                    <span style="background: rgba(255, 255, 255, 0.2); padding: 5px 15px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.3);">100g - ₹49</span>
+                    <span style="background: rgba(255, 255, 255, 0.2); padding: 5px 15px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.3);">200g - ₹99</span>
+                    <span style="background: rgba(255, 255, 255, 0.2); padding: 5px 15px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.3);">250g - ₹119</span>
+                </div>
                 <p class="hero-tagline">Authentic traditional recipes made with 100% organic ingredients</p>
             </div>
         </div>
@@ -110,334 +115,274 @@
         <div class="container">
             <h2 class="section-title">Our Pickles</h2>
 
-            <div class="products-grid"> <!-- Product Card 1 -->
+            <div class="products-grid">
+                <!-- Mango Pickle (Tangy/Spicy) -->
                 <div class="popular-card">
+                    <div class="badge-new">NEW</div>
                     <div class="popular-image">
-                        <img src="assets/images/GreenChilli_1.jpg" alt="Green Chilli Achaar" loading="lazy">
+                        <img src="assets/images/Mango_Pickle.jpg" alt="Mango Pickle" loading="lazy">
                     </div>
-                    <h3>Green Chilli Achaar</h3>
-                    <p class="bengali-name">সবুজ লঙ্কা আচার</p>
-                    <div class="taste-badge hot">Hot</div>
-
-                    <p class="popular-description">Fiery green chilli pickle for spice lovers</p>
-
-                    <div class="ingredients-wrapper">
-                        <div class="ingredients-toggle">
-                            <span>INGREDIENTS</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <ul class="ingredients-list">
-                            <li>Green chilli</li>
-                            <li>Mustard oil (Engine brand)</li>
-                            <li>Vinegar (Annapurna brand)</li>
-                            <li>Other masalas</li>
-                        </ul>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
+                    <h3>Mango Pickle (Tangy/Spicy)</h3>
+                    <p class="bengali-name">আমের আচার</p>
+                    <div class="taste-badge tangy">Tangy/Spicy</div>
+                    
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
                     </div>
+
 
                     <div class="quantity-selection">
                         <h4 class="quantity-title">Select Quantity:</h4>
                         <div class="quantity-options-grid">
-                            <button class="quantity-btn" data-quantity="100g" data-price="80">100g - ₹80</button>
-                            <button class="quantity-btn" data-quantity="250g" data-price="185">250g - ₹185</button>
-                            <div class="custom-qty-row">
-                                <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom Qty</button>
-                            </div>
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
                         </div>
                         <div class="custom-quantity-input" style="display: none;">
-                            <input type="number" id="green-chilli-custom-qty" min="100"
-                                placeholder="Enter grams (min 100g)">
-                            <span class="custom-note">Price will be discussed on call/WhatsApp</span>
+                            <input type="number" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price discussed on WhatsApp</span>
                         </div>
                     </div>
 
                     <div class="card-actions">
-                        <button class="add-cart-btn" onclick="addToCartFromCard('Green Chilli Achaar', this)">Add to
-                            Cart</button>
-                        <button class="order-now-btn" onclick="orderNowFromCard('Green Chilli Achaar', this)">Order
-                            Now</button>
+                        <button class="add-cart-btn outlined" onclick="addToCartFromCard('Mango Pickle (Tangy/Spicy)', this)">Add to Cart</button>
+                        <button class="order-now-btn" onclick="orderNowFromCard('Mango Pickle (Tangy/Spicy)', this)">Order Now</button>
                     </div>
                     <div class="error-message" style="display: none;"></div>
-                </div> <!-- Product Card 2 -->
+                </div>
+
+                <!-- Mango with Red Chilli Pickle (Tangy/Hot) -->
                 <div class="popular-card">
+                    <div class="badge-new">NEW</div>
                     <div class="popular-image">
-                        <img src="assets/images/jujube.jpg" alt="Boroi Achaar" loading="lazy">
+                        <img src="assets/images/Red_Chili_Pickle_1.jpg" alt="Mango with Red Chilli Pickle" loading="lazy">
                     </div>
-                    <h3>Boroi Achaar</h3>
-                    <p class="bengali-name">বরই আচার</p>
-                    <div class="taste-badge tangy-sweet">Tangy-Sweet</div>
-
-                    <p class="popular-description">Sweet and sour jujube pickle with unique flavor</p>
-
-                    <div class="ingredients-wrapper">
-                        <div class="ingredients-toggle">
-                            <span>INGREDIENTS</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <ul class="ingredients-list">
-                            <li>Boroi (Jujube)</li>
-                            <li>Mustard oil (Engine brand)</li>
-                            <li>Vinegar (Annapurna brand)</li>
-                            <li>Other masalas</li>
-                        </ul>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
+                    <h3>Mango with Red Chilli Pickle (Tangy/Hot)</h3>
+                    <p class="bengali-name">আম ও লাল লঙ্কা আচার</p>
+                    <div class="taste-badge hot">Tangy/Hot</div>
+                    
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
                     </div>
+
 
                     <div class="quantity-selection">
                         <h4 class="quantity-title">Select Quantity:</h4>
                         <div class="quantity-options-grid">
-                            <button class="quantity-btn" data-quantity="100g" data-price="80">100g - ₹80</button>
-                            <button class="quantity-btn" data-quantity="250g" data-price="189">250g - ₹189</button>
-                            <div class="custom-qty-row">
-                                <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom Qty</button>
-                            </div>
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
                         </div>
                         <div class="custom-quantity-input" style="display: none;">
-                            <input type="number" id="boroi-custom-qty" min="100" placeholder="Enter grams (min 100g)">
-                            <span class="custom-note">Price will be discussed on call/WhatsApp</span>
+                            <input type="number" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price discussed on WhatsApp</span>
                         </div>
                     </div>
 
                     <div class="card-actions">
-                        <button class="add-cart-btn" onclick="addToCartFromCard('Boroi Achaar', this)">Add to
-                            Cart</button>
-                        <button class="order-now-btn" onclick="orderNowFromCard('Boroi Achaar', this)">Order
-                            Now</button>
+                        <button class="add-cart-btn outlined" onclick="addToCartFromCard('Mango with Red Chilli Pickle (Tangy/Hot)', this)">Add to Cart</button>
+                        <button class="order-now-btn" onclick="orderNowFromCard('Mango with Red Chilli Pickle (Tangy/Hot)', this)">Order Now</button>
                     </div>
                     <div class="error-message" style="display: none;"></div>
-                </div> <!-- Product Card 3 -->
+                </div>
+
+                <!-- Garlic Pickle (Spicy) -->
                 <div class="popular-card">
+                    <div class="badge-new">NEW</div>
+                    <div class="popular-image">
+                        <img src="assets/images/Garlic_Pickle.jpg" alt="Garlic Pickle" loading="lazy">
+                    </div>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
+                    <h3>Garlic Pickle (Spicy)</h3>
+                    <p class="bengali-name">রসুন আচার</p>
+                    <div class="taste-badge spicy">Spicy</div>
+                    
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
+                    </div>
+
+
+                    <div class="quantity-selection">
+                        <h4 class="quantity-title">Select Quantity:</h4>
+                        <div class="quantity-options-grid">
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
+                        </div>
+                        <div class="custom-quantity-input" style="display: none;">
+                            <input type="number" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price discussed on WhatsApp</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="add-cart-btn outlined" onclick="addToCartFromCard('Garlic Pickle (Spicy)', this)">Add to Cart</button>
+                        <button class="order-now-btn" onclick="orderNowFromCard('Garlic Pickle (Spicy)', this)">Order Now</button>
+                    </div>
+                    <div class="error-message" style="display: none;"></div>
+                </div>
+
+                <!-- Khatta Meetha Achaar -->
+                <div class="popular-card">
+                    <div class="badge-new">NEW</div>
                     <div class="popular-image">
                         <img src="assets/images/Khatta-meetha.png" alt="Khatta Meetha Achaar" loading="lazy">
                     </div>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
                     <h3>Khatta Meetha Achaar</h3>
                     <p class="bengali-name">খাট্টা মিঠা আচার</p>
-                    <div class="taste-badge tangy-sweet">Sweet & Sour</div>
-
-                    <p class="popular-description">Perfect balance of sweet and tangy flavors</p>
-
-                    <div class="ingredients-wrapper">
-                        <div class="ingredients-toggle">
-                            <span>INGREDIENTS</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <ul class="ingredients-list">
-                            <li>Mixed fruits & veg</li>
-                            <li>Mustard oil (Engine brand)</li>
-                            <li>Vinegar (Annapurna brand)</li>
-                            <li>Jaggery/Sugar & masalas</li>
-                        </ul>
+                    <div class="taste-badge tangy-sweet">Tangy-Sweet</div>
+                    
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
                     </div>
+
 
                     <div class="quantity-selection">
                         <h4 class="quantity-title">Select Quantity:</h4>
                         <div class="quantity-options-grid">
-                            <button class="quantity-btn" data-quantity="100g" data-price="85">100g - ₹85</button>
-                            <button class="quantity-btn" data-quantity="250g" data-price="199">250g - ₹199</button>
-                            <div class="custom-qty-row">
-                                <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom Qty</button>
-                            </div>
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
                         </div>
                         <div class="custom-quantity-input" style="display: none;">
-                            <input type="number" id="khatta-custom-qty" min="100" placeholder="Enter grams (min 100g)">
-                            <span class="custom-note">Price will be discussed on call/WhatsApp</span>
+                            <input type="number" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price discussed on WhatsApp</span>
                         </div>
                     </div>
 
                     <div class="card-actions">
-                        <button class="add-cart-btn" onclick="addToCartFromCard('Khatta Meetha Achaar', this)">Add to
-                            Cart</button>
-                        <button class="order-now-btn" onclick="orderNowFromCard('Khatta Meetha Achaar', this)">Order
-                            Now</button>
+                        <button class="add-cart-btn outlined" onclick="addToCartFromCard('Khatta Meetha Achaar', this)">Add to Cart</button>
+                        <button class="order-now-btn" onclick="orderNowFromCard('Khatta Meetha Achaar', this)">Order Now</button>
                     </div>
                     <div class="error-message" style="display: none;"></div>
-                </div> <!-- Product Card 4 -->
+                </div>
+
+                <!-- Jolpai Achaar -->
                 <div class="popular-card">
                     <div class="popular-image">
                         <img src="assets/images/Jolpai_Pickle-1.jpg" alt="Jolpai Achaar" loading="lazy">
                     </div>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
                     <h3>Jolpai Achaar</h3>
                     <p class="bengali-name">জলপাই আচার</p>
                     <div class="taste-badge tangy">Tangy</div>
 
-                    <p class="popular-description">Traditional olive pickle perfectly spiced</p>
-
-                    <div class="ingredients-wrapper">
-                        <div class="ingredients-toggle">
-                            <span>INGREDIENTS</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <ul class="ingredients-list">
-                            <li>Jolpai (Olive)</li>
-                            <li>Mustard oil (Engine brand)</li>
-                            <li>Vinegar (Annapurna brand)</li>
-                            <li>Other masalas</li>
-                        </ul>
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
                     </div>
+
 
                     <div class="quantity-selection">
                         <h4 class="quantity-title">Select Quantity:</h4>
                         <div class="quantity-options-grid">
-                            <button class="quantity-btn" data-quantity="100g" data-price="85">100g - ₹85</button>
-                            <button class="quantity-btn" data-quantity="250g" data-price="199">250g - ₹199</button>
-                            <div class="custom-qty-row">
-                                <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom Qty</button>
-                            </div>
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
                         </div>
                         <div class="custom-quantity-input" style="display: none;">
-                            <input type="number" id="jolpai-custom-qty" min="100" placeholder="Enter grams (min 100g)">
-                            <span class="custom-note">Price will be discussed on call/WhatsApp</span>
+                            <input type="number" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price discussed on WhatsApp</span>
                         </div>
                     </div>
 
                     <div class="card-actions">
-                        <button class="add-cart-btn" onclick="addToCartFromCard('Jolpai Achaar', this)">Add to
-                            Cart</button>
-                        <button class="order-now-btn" onclick="orderNowFromCard('Jolpai Achaar', this)">Order
-                            Now</button>
+                        <button class="add-cart-btn outlined" onclick="addToCartFromCard('Jolpai Achaar', this)">Add to Cart</button>
+                        <button class="order-now-btn" onclick="orderNowFromCard('Jolpai Achaar', this)">Order Now</button>
                     </div>
                     <div class="error-message" style="display: none;"></div>
-                </div> <!-- Product Card 5 -->
+                </div>
+
+                <!-- Green Chilli Achaar -->
                 <div class="popular-card">
                     <div class="popular-image">
-                        <img src="assets/images/Garlic_Pickle.jpg" alt="Garlic Achaar" loading="lazy">
+                        <img src="assets/images/GreenChilli_1.jpg" alt="Green Chilli Achaar" loading="lazy">
                     </div>
-                    <h3>Garlic Achaar</h3>
-                    <p class="bengali-name">রসুন আচার</p>
-                    <div class="taste-badge spicy">Spicy</div>
-                    <div class="coming-soon">Coming Soon</div>
-                    <p class="popular-description">Aromatic garlic pickle with traditional spices</p>
-
-                    <div class="ingredients-wrapper">
-                        <div class="ingredients-toggle">
-                            <span>INGREDIENTS</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <ul class="ingredients-list">
-                            <li>Garlic</li>
-                            <li>Mustard oil (Engine brand)</li>
-                            <li>Vinegar (Annapurna brand)</li>
-                            <li>Other masalas</li>
-                        </ul>
-                    </div>
-
-                    <div class="quantity-selection" style="opacity: 0.6; pointer-events: none;">
-                        <h4 class="quantity-title">Select Quantity:</h4>
-                        <div class="quantity-options-grid">
-                            <button class="quantity-btn" disabled>100g</button>
-                            <button class="quantity-btn" disabled>250g</button>
-                        </div>
-                    </div>
-
-                    <button class="order-btn" disabled
-                        style="cursor: not-allowed; background: #999; color: #fff; transform: none; box-shadow: none;">Coming
-                        Soon</button>
-                    <div class="error-message" style="display: none;"></div>
-                </div> <!-- Product Card 6 -->
-                <div class="popular-card">
-                    <div class="popular-image">
-                        <img src="assets/images/Red_Chili_Pickle_1.jpg" alt="Red Chilli Achaar" loading="lazy">
-                    </div>
-                    <h3>Red Chilli Achaar</h3>
-                    <p class="bengali-name">লাল লঙ্কা আচার</p>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
+                    <h3>Green Chilli</h3>
+                    <p class="bengali-name">কাঁচা লঙ্কার আচার</p>
                     <div class="taste-badge hot">Hot</div>
-                    <div class="coming-soon">Coming Soon</div>
-                    <p class="popular-description">Bold red chilli pickle with intense heat</p>
-
-                    <div class="ingredients-wrapper">
-                        <div class="ingredients-toggle">
-                            <span>INGREDIENTS</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <ul class="ingredients-list">
-                            <li>Red chilli</li>
-                            <li>Mustard oil (Engine brand)</li>
-                            <li>Vinegar (Annapurna brand)</li>
-                            <li>Other masalas</li>
-                        </ul>
+                    
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
                     </div>
 
-                    <div class="quantity-selection" style="opacity: 0.6; pointer-events: none;">
+
+                    <div class="quantity-selection">
                         <h4 class="quantity-title">Select Quantity:</h4>
                         <div class="quantity-options-grid">
-                            <button class="quantity-btn" disabled>100g</button>
-                            <button class="quantity-btn" disabled>250g</button>
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
+                        </div>
+                        <div class="custom-quantity-input" style="display: none;">
+                            <input type="number" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price discussed on WhatsApp</span>
                         </div>
                     </div>
 
-                    <button class="order-btn" disabled
-                        style="cursor: not-allowed; background: #999; color: #fff; transform: none; box-shadow: none;">Coming
-                        Soon</button>
+                    <div class="card-actions">
+                        <button class="add-cart-btn outlined" onclick="addToCartFromCard('Green Chilli Achaar', this)">Add to Cart</button>
+                        <button class="order-now-btn" onclick="orderNowFromCard('Green Chilli Achaar', this)">Order Now</button>
+                    </div>
                     <div class="error-message" style="display: none;"></div>
-                </div> <!-- Product Card 7 -->
+                </div>
+
+                <!-- Boroi Achaar -->
                 <div class="popular-card">
                     <div class="popular-image">
-                        <img src="assets/images/Mixer_pickle_1.jpg" alt="Mixed Vegetable Achaar" loading="lazy">
+                        <img src="assets/images/jujube.jpg" alt="Boroi Achaar" loading="lazy">
                     </div>
-                    <h3>Mixed Vegetable Achaar</h3>
-                    <p class="bengali-name">মিক্সড ভেজিটেবল আচার / মিক্সার আচার</p>
-                    <div class="taste-badge tangy">Tangy</div>
-                    <div class="coming-soon">Coming Soon</div>
-                    <p class="popular-description">Colorful mix of fresh vegetables in spices</p>
-
-                    <div class="ingredients-wrapper">
-                        <div class="ingredients-toggle">
-                            <span>INGREDIENTS</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <ul class="ingredients-list">
-                            <li>Carrot, Capsicum, Chilli, Tomato</li>
-                            <li>Mustard oil (Engine brand)</li>
-                            <li>Vinegar (Annapurna brand)</li>
-                            <li>Other masalas</li>
-                        </ul>
+                    <span class="offer-card-label">🔥 Early Bird Offer</span>
+                    <h3>Boroi Achaar</h3>
+                    <p class="bengali-name">কুলের আচার</p>
+                    <div class="taste-badge tangy-sweet">Tangy-Sweet</div>
+                    
+                    <div class="price-display mb-3">
+                        <span class="old-price">₹90</span>
+                        <span class="new-price">₹49</span>
+                        <span class="offer-tag">Early Bird Offer</span>
                     </div>
 
-                    <div class="quantity-selection" style="opacity: 0.6; pointer-events: none;">
+
+                    <div class="quantity-selection">
                         <h4 class="quantity-title">Select Quantity:</h4>
                         <div class="quantity-options-grid">
-                            <button class="quantity-btn" disabled>100g</button>
-                            <button class="quantity-btn" disabled>250g</button>
+                            <button class="quantity-btn" data-quantity="100g" data-price="49">100g</button>
+                            <button class="quantity-btn" data-quantity="200g" data-price="99">200g</button>
+                            <button class="quantity-btn" data-quantity="250g" data-price="119">250g</button>
+                            <button class="quantity-btn custom-quantity-btn" data-quantity="custom">Custom</button>
+                        </div>
+                        <div class="custom-quantity-input" style="display: none;">
+                            <input type="number" min="100" placeholder="Enter grams (min 100g)">
+                            <span class="custom-note">Price discussed on WhatsApp</span>
                         </div>
                     </div>
 
-                    <button class="order-btn" disabled
-                        style="cursor: not-allowed; background: #999; color: #fff; transform: none; box-shadow: none;">Coming
-                        Soon</button>
-                    <div class="error-message" style="display: none;"></div>
-                </div> <!-- Product Card 8 -->
-                <div class="popular-card">
-                    <div class="popular-image">
-                        <img src="assets/images/capcicum.jpg" alt="Capsicum Achaar" loading="lazy">
+                    <div class="card-actions">
+                        <button class="add-cart-btn outlined" onclick="addToCartFromCard('Boroi Achaar', this)">Add to Cart</button>
+                        <button class="order-now-btn" onclick="orderNowFromCard('Boroi Achaar', this)">Order Now</button>
                     </div>
-                    <h3>Capsicum Achaar</h3>
-                    <p class="bengali-name">ক্যাপসিকাম আচার</p>
-                    <div class="taste-badge spicy">Spicy</div>
-                    <div class="coming-soon">Coming Soon</div>
-                    <p class="popular-description">Crispy capsicum pickle with aromatic spices</p>
-
-                    <div class="ingredients-wrapper">
-                        <div class="ingredients-toggle">
-                            <span>INGREDIENTS</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <ul class="ingredients-list">
-                            <li>Capsicum</li>
-                            <li>Mustard oil (Engine brand)</li>
-                            <li>Vinegar (Annapurna brand)</li>
-                            <li>Other masalas</li>
-                        </ul>
-                    </div>
-
-                    <div class="quantity-selection" style="opacity: 0.6; pointer-events: none;">
-                        <h4 class="quantity-title">Select Quantity:</h4>
-                        <div class="quantity-options-grid">
-                            <button class="quantity-btn" disabled>100g</button>
-                            <button class="quantity-btn" disabled>250g</button>
-                        </div>
-                    </div>
-
-                    <button class="order-btn" disabled
-                        style="cursor: not-allowed; background: #999; color: #fff; transform: none; box-shadow: none;">Coming
-                        Soon</button>
                     <div class="error-message" style="display: none;"></div>
                 </div>
             </div>
